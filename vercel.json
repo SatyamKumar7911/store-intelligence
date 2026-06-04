@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/dashboard",
+      "destination": "/app/static/index.html"
+    },
+    {
+      "source": "/dashboard/(.*)",
+      "destination": "/app/static/$1"
+    },
+    {
+      "source": "/",
+      "destination": "/app/static/index.html"
+    },
+    {
+      "source": "/((?!dashboard|app/static/).*)",
+      "destination": "/api/index.py"
+    }
+  ]
+}

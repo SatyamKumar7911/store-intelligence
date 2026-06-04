@@ -1,0 +1,28 @@
+{
+  "STORE_BLR_002": {
+    "name": "Apex Retail - Bangalore 02",
+    "open_hours": "09:00-22:00",
+    "zones": {
+      "ENTRY_01": {
+        "name": "Main Entrance",
+        "type": "ENTRY",
+        "cameras": ["CAM_ENTRY_01"]
+      },
+      "SKINCARE": {
+        "name": "Skincare Aisle",
+        "type": "SHELF",
+        "cameras": ["CAM_FLOOR_01"]
+      },
+      "MAKEUP": {
+        "name": "Makeup Display",
+        "type": "DISPLAY",
+        "cameras": ["CAM_FLOOR_01"]
+      },
+      "BILLING_01": {
+        "name": "Billing Counter Queue",
+        "type": "BILLING",
+        "cameras": ["CAM_BILLING_01"]
+      }
+    }
+  }
+}
