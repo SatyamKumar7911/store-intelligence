@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
@@ -40,6 +40,10 @@ async def add_structured_logs(request: Request, call_next):
         store_id = request.path_params.get("id", "NA")
         print(f"trace_id=NA store_id={store_id} endpoint={request.url.path} latency_ms={latency} status_code=503 error='{str(e)}'")
         return JSONResponse(status_code=503, content={"error": "Service unavailable or internal error"})
+
+@app.get("/")
+def root():
+    return RedirectResponse(url="/dashboard/index.html")
 
 @app.post("/events/ingest")
 def ingest(events: List[StoreEvent]):
