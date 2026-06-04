@@ -11,6 +11,8 @@
 > **Real-Time Computer Vision & Analytics Platform for Physical Retail**
 >
 > Transform your store operations with AI-powered customer tracking, intelligent analytics, and actionable insights.
+>
+> 🚀 **Live Demo:** **[https://store-intelligence-9457.onrender.com/dashboard/index.html](https://store-intelligence-9457.onrender.com/dashboard/index.html)**
 
 ---
 
@@ -104,7 +106,8 @@ curl http://localhost:8000/health
 ### 2️⃣ **View Live Dashboard**
 
 Open your browser:
-👉 **[http://localhost:8000/dashboard/index.html](http://localhost:8000/dashboard/index.html)**
+👉 **[https://store-intelligence-9457.onrender.com/dashboard/index.html](https://store-intelligence-9457.onrender.com/dashboard/index.html)** (Live Demo)
+👉 **[http://localhost:8000/dashboard/index.html](http://localhost:8000/dashboard/index.html)** (Local Development)
 
 Dashboard shows:
 - 📈 Real-time visitor count
@@ -332,7 +335,7 @@ docker-compose up -d --build
 # 4. Render will automatically build the Dockerfile and deploy!
 ```
 
-The API will be automatically available at your custom `.onrender.com` URL.
+The API is deployed and live at: **[https://store-intelligence-9457.onrender.com/dashboard/index.html](https://store-intelligence-9457.onrender.com/dashboard/index.html)**
 
 ### Custom Cloud (AWS, GCP, Azure)
 ```bash
