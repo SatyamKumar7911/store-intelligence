@@ -3,7 +3,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
-[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+[![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-active-success?style=for-the-badge)](https://ultralytics.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -38,7 +38,7 @@ Store Intelligence is a **production-ready, end-to-end platform** that turns CCT
 | 📊 **Live Dashboard** | Real-time metrics, zero frontend dependencies |
 | 🔍 **Anomaly Detection** | Automatic alerts for queue spikes and unusual patterns |
 | 🔗 **Conversion Funnel Analysis** | Measure entry-to-billing conversion rates |
-| 🐳 **Cloud-Ready** | Docker Compose + Vercel serverless support |
+| 🐳 **Cloud-Ready** | Docker Compose + Render deployment ready |
 | 🛡️ **Production-Grade** | Idempotent APIs, comprehensive error handling, unit tests |
 
 ---
@@ -47,8 +47,6 @@ Store Intelligence is a **production-ready, end-to-end platform** that turns CCT
 
 ```
 store-intelligence/
-├── 📁 api/                          # Vercel Serverless Entry
-│   └── index.py                     # FastAPI Router
 ├── 📁 app/                          # FastAPI Backend
 │   ├── 📁 static/
 │   │   ├── index.html               # Live Dashboard UI
@@ -223,7 +221,7 @@ Returns current operational anomalies (queue spikes, dead zones, etc.)
 | **Database** | SQLite | Containerization-friendly, zero dependencies |
 | **Frontend** | Vanilla JS | Zero build steps, instant dashboard |
 | **DevOps** | Docker + Compose | Reproducible environments, easy cloud deployment |
-| **Cloud** | Vercel Functions | Serverless, auto-scaling, global CDN |
+| **Cloud** | Render | Dockerized PaaS deployment |
 
 ---
 
@@ -239,7 +237,7 @@ graph TB
     F["📊 Analytics Engine<br/>(SQL Aggregations)"]
     G["📈 Live Dashboard<br/>(Real-Time UI)"]
     H["🌐 REST API<br/>(Analytics Endpoints)"]
-    I["☁️ Vercel Deployment<br/>(Serverless)"]
+    I["☁️ Render Deployment<br/>(Docker PaaS)"]
 
     A -->|Frame by Frame| B
     B -->|Person Detections| C
@@ -325,16 +323,16 @@ curl -X POST http://localhost:8000/events/ingest \
 docker-compose up -d --build
 ```
 
-### Vercel (Production)
+### Render (Production)
 ```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel deploy
+# Deploy to Render via Docker
+# 1. Push this repository to GitHub
+# 2. Go to Render.com -> New Web Service
+# 3. Connect your repository
+# 4. Render will automatically build the Dockerfile and deploy!
 ```
 
-The API is automatically available at `https://your-project.vercel.app`
+The API will be automatically available at your custom `.onrender.com` URL.
 
 ### Custom Cloud (AWS, GCP, Azure)
 ```bash
